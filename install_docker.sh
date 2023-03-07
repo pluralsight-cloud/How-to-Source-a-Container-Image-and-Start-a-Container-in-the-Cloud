@@ -1,6 +1,7 @@
 #!/bin/bash
 
-#Update the apt package index and install some required packages
+#Kill the stupid unattended upgrade (if still running)
+/usr/bin/pgrep unatte | xargs -n 1 kill
 
 #lsof /var/lib/dpkg/lock-frontend
 LSOF_STATUS=0
