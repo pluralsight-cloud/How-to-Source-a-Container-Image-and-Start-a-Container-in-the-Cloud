@@ -2,6 +2,10 @@
 
 #Kill the stupid unattended upgrade (if still running)
 /usr/bin/pgrep unatte | xargs -n 1 kill
+/usr/bin/fuser -k /var/lib/dpkg/lock-frontend
+
+#install lsof
+apt install -y lsof
 
 #lsof /var/lib/dpkg/lock-frontend
 LSOF_STATUS=0
