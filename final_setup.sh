@@ -12,3 +12,4 @@ docker commit checker server-1:5000/checker:latest
 docker rm checker
 docker rmi debian:buster 
 docker run -t --name checker server-1:5000/checker:latest /tmp/check_final.sh
+touch /tmp/checker_done
